@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BidCubeStatusHistoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MCREF" Type="uniqueidentifier" />
+          <Property Name="sales_rep" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="bidding_manager" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="email_subject" Type="nvarchar" MaxLength="320" />
+          <Property Name="reply_count" Type="int" />
+          <Property Name="bid_status" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="client" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CPI" Type="float" />
+          <Property Name="LOI" Type="float" />
+          <Property Name="IR" Type="float" />
+          <Property Name="n_requested" Type="int" />
+          <Property Name="n_feasible" Type="int" />
+          <Property Name="target_age_minimum" Type="int" />
+          <Property Name="target_age_maximum" Type="int" />
+          <Property Name="target_gender" Type="varchar" MaxLength="100" />
+          <Property Name="target_notes" Type="varchar(max)" />
+          <Property Name="email_body" Type="varchar(max)" />
+          <Property Name="include_bid_details" Type="bit" />
+          <Property Name="upload_reference" Type="varbinary" MaxLength="50" />
+          <Property Name="upload_attachment" Type="varbinary" MaxLength="50" />
+          <Property Name="tags" Type="nvarchar" MaxLength="50" />
+          <Property Name="last_update" Type="datetime" Nullable="false" />
+          <Property Name="country_language" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Status_History">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MCREF" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bid_status" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="reply_status" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="won_status" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="valid_from" Type="date" />
+          <Property Name="valid_to" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_bid_Status_History' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_bid_Status_History" />-->
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Mcref' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Mcref" />-->
+        <EntityContainer Name="BidCubeStatusHistoryModelStoreContainer">
+          <EntitySet Name="Bid" EntityType="Self.Bid" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status_History" EntityType="Self.Status_History" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BidCubeStatusHistoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bid">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MCREF" Type="Guid" />
+          <Property Name="sales_rep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bidding_manager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email_subject" Type="String" MaxLength="320" FixedLength="false" Unicode="true" />
+          <Property Name="reply_count" Type="Int32" />
+          <Property Name="bid_status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="client" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CPI" Type="Double" />
+          <Property Name="LOI" Type="Double" />
+          <Property Name="IR" Type="Double" />
+          <Property Name="n_requested" Type="Int32" />
+          <Property Name="n_feasible" Type="Int32" />
+          <Property Name="target_age_minimum" Type="Int32" />
+          <Property Name="target_age_maximum" Type="Int32" />
+          <Property Name="target_gender" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="target_notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="email_body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="include_bid_details" Type="Boolean" />
+          <Property Name="upload_reference" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="upload_attachment" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="tags" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="last_update" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="country_language" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Status_History">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MCREF" Type="Guid" Nullable="false" />
+          <Property Name="bid_status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reply_status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="won_status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="valid_from" Type="DateTime" Precision="0" />
+          <Property Name="valid_to" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="BidCubeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bid" EntityType="Self.Bid" />
+          <EntitySet Name="Status_History" EntityType="Self.Status_History" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BidCubeStatusHistoryModelStoreContainer" CdmEntityContainer="BidCubeEntities">
+          <EntitySetMapping Name="Bid">
+            <EntityTypeMapping TypeName="BidCubeStatusHistoryModel.Bid">
+              <MappingFragment StoreEntitySet="Bid">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MCREF" ColumnName="MCREF" />
+                <ScalarProperty Name="sales_rep" ColumnName="sales_rep" />
+                <ScalarProperty Name="bidding_manager" ColumnName="bidding_manager" />
+                <ScalarProperty Name="email_subject" ColumnName="email_subject" />
+                <ScalarProperty Name="reply_count" ColumnName="reply_count" />
+                <ScalarProperty Name="bid_status" ColumnName="bid_status" />
+                <ScalarProperty Name="client" ColumnName="client" />
+                <ScalarProperty Name="CPI" ColumnName="CPI" />
+                <ScalarProperty Name="LOI" ColumnName="LOI" />
+                <ScalarProperty Name="IR" ColumnName="IR" />
+                <ScalarProperty Name="n_requested" ColumnName="n_requested" />
+                <ScalarProperty Name="n_feasible" ColumnName="n_feasible" />
+                <ScalarProperty Name="target_age_minimum" ColumnName="target_age_minimum" />
+                <ScalarProperty Name="target_age_maximum" ColumnName="target_age_maximum" />
+                <ScalarProperty Name="target_gender" ColumnName="target_gender" />
+                <ScalarProperty Name="target_notes" ColumnName="target_notes" />
+                <ScalarProperty Name="email_body" ColumnName="email_body" />
+                <ScalarProperty Name="include_bid_details" ColumnName="include_bid_details" />
+                <ScalarProperty Name="upload_reference" ColumnName="upload_reference" />
+                <ScalarProperty Name="upload_attachment" ColumnName="upload_attachment" />
+                <ScalarProperty Name="tags" ColumnName="tags" />
+                <ScalarProperty Name="last_update" ColumnName="last_update" />
+                <ScalarProperty Name="country_language" ColumnName="country_language" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status_History">
+            <EntityTypeMapping TypeName="BidCubeStatusHistoryModel.Status_History">
+              <MappingFragment StoreEntitySet="Status_History">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MCREF" ColumnName="MCREF" />
+                <ScalarProperty Name="bid_status" ColumnName="bid_status" />
+                <ScalarProperty Name="reply_status" ColumnName="reply_status" />
+                <ScalarProperty Name="won_status" ColumnName="won_status" />
+                <ScalarProperty Name="valid_from" ColumnName="valid_from" />
+                <ScalarProperty Name="valid_to" ColumnName="valid_to" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

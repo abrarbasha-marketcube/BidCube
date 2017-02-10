@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Bid_Cube
+namespace BidCube
 {
     public class RouteConfig
     {
