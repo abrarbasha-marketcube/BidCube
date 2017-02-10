@@ -1,17 +1,25 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.st-selected {
+    border-left: 4px solid #428BCA;
+    background-color: #ADD8E6;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.st-sort-ascent:before {
+    content: '\25B2';
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.st-sort-descent:before {
+    content: '\25BC';
+}
+
+.table-container {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.modalGridBorder {
+    border-right: 1px solid #428BCA;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #428BCA !important;
 }

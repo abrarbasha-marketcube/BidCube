@@ -54,7 +54,7 @@ namespace BidCube.DataService
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
             return false;
         }

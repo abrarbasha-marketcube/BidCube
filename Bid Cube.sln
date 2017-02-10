@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bid Cube", "Bid Cube\Bid Cube.csproj", "{10447438-C5E7-44FF-9084-8A213851BBC3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BidCube.API", "BidCube.API", "{BA6812AE-E715-413C-94B3-A11FAB2C8E3C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BidCube.DAL", "BidCube.DAL", "{137E0DE0-1F61-4F63-8E7C-415E2A1153DF}"
@@ -21,18 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidCube.Service", "Bid Cube
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidCube.API", "Bid Cube\BidCube.API\BidCube.API.csproj", "{23557A37-07DA-4DD5-980F-0611ADD855F8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BidCube.View", "BidCube.View", "{66B8C66C-9516-4409-97C1-E27810FE62A5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{10447438-C5E7-44FF-9084-8A213851BBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10447438-C5E7-44FF-9084-8A213851BBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10447438-C5E7-44FF-9084-8A213851BBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10447438-C5E7-44FF-9084-8A213851BBC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EC0D67A5-822F-4E9E-B401-52B07039E628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC0D67A5-822F-4E9E-B401-52B07039E628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC0D67A5-822F-4E9E-B401-52B07039E628}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,7 +50,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{10447438-C5E7-44FF-9084-8A213851BBC3} = {66B8C66C-9516-4409-97C1-E27810FE62A5}
 		{EC0D67A5-822F-4E9E-B401-52B07039E628} = {137E0DE0-1F61-4F63-8E7C-415E2A1153DF}
 		{68E4BBB1-124F-4BA5-A4FA-A712CA1936D0} = {137E0DE0-1F61-4F63-8E7C-415E2A1153DF}
 		{598E4316-D236-4F47-B10D-F447695FEB35} = {91885E31-B788-4674-8341-27BF53EC505F}
