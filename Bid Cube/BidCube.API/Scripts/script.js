@@ -68,7 +68,7 @@ $(document).ready(function () {
     $('#CPI').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -76,7 +76,7 @@ $(document).ready(function () {
     $('#IR').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -84,7 +84,7 @@ $(document).ready(function () {
     $('#LOI').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -94,7 +94,7 @@ $(document).ready(function () {
     $('#NRequested').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -102,7 +102,7 @@ $(document).ready(function () {
     $('#NFeasible').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -110,7 +110,7 @@ $(document).ready(function () {
     $('#TargetAge').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -151,7 +151,7 @@ $(document).ready(function () {
     $('#newCPI').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         } /*,
@@ -164,7 +164,7 @@ $(document).ready(function () {
     $('#newIR').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -172,7 +172,7 @@ $(document).ready(function () {
     $('#newLOI').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -182,7 +182,7 @@ $(document).ready(function () {
     $('#newNRequested').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -190,7 +190,7 @@ $(document).ready(function () {
     $('#newNFeasible').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -198,7 +198,7 @@ $(document).ready(function () {
     $('#newTargetAge').editable({
         type: 'text',
         validate: function (value) {
-            if ($.isNumeric(value) == '') {
+            if ($.isNumeric(value) === '') {
                 return 'Only numbers are allowed';
             }
         }
@@ -253,7 +253,7 @@ $('#emailTab').on('shown', function () {
     myForm.submit();
     document.body.removeChild(myForm);
 
-})
+});
 
 var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
     $scope.ok = function () {
