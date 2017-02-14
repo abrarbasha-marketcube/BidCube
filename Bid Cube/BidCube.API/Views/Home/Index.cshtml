@@ -4,17 +4,19 @@
 <head>
     <script src="~/Scripts/angular.js"></script>
 
+    <!-- x-editable -->
+    <link href="~/Content/angular-xeditable-0.6.0/css/xeditable.css" rel="stylesheet">
+    <!--<script src="~/Scripts/jquery-3.1.1.js"></script>-->
+    <script src="~/Content/angular-xeditable-0.6.0/js/xeditable.js"></script>
+
     <!-- bootstrap -->
     <!--<link rel="stylesheet" href="~/Content/bootstrap-theme.css" />-->
-    <script src="~/Scripts/jquery-3.1.1.js"></script>
+
     <!--<script src="~/Scripts/bootstrap.js"></script>-->
     <!-- other -->
     <link rel="stylesheet" href="~/Content/Site.css" />
     <script src="~/Scripts/script.js"></script>
 
-    <!-- x-editable -->
-    <link href="~/Content/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
-    <script src="~/Content/bootstrap3-editable/js/bootstrap-editable.js"></script>
 
     <!-- smart table -->
     <script src="~/Scripts/lrStickyHeader.js"></script>
@@ -93,101 +95,101 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="editTab">
                                 <!-- Start Tab Body -->
-                                <div class="col-lg-12">
-                                    <table id="editBidModal" class="table table-bordered table-striped" style="clear: both">
-                                        <tbody>
-                                            <tr>
-                                                <td width="35%">Status:</td>
-                                                <td width="65%"><a href="#" id="Status" data-type="text" data-pk="1" data-placement="right" data-title="Status"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>MCREF:</td>
-                                                <td><a href="#" id="MCREF" data-type="text" data-pk="1" data-placement="right" data-title="MCREF"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Subject:</td>
-                                                <td><a href="#" id="Subject" data-type="text" data-pk="1" data-placement="right" data-title="Subject"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Client:</td>
-                                                <td><a href="#" id="Client" data-type="text" data-pk="1" data-placement="right" data-title="Client"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sales Rep:</td>
-                                                <td><a href="#" id="SalesRep" data-type="text" data-pk="1" data-placement="right" data-title="Sales Rep"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bidding Manager:</td>
-                                                <td><a href="#" id="BiddingManager" data-type="text" data-pk="1" data-placement="right" data-title="Bidding Manager"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Reply Count:</td>
-                                                <td><a href="#" id="ReplyCount" data-type="text" data-pk="1" data-placement="right" data-title="Reply Count"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Total Revenue:</td>
-                                                <td><a href="#" id="TotalRevenue" data-type="text" data-pk="1" data-placement="right" data-title="Total Revenue"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>CPI:</td>
-                                                <td><a href="#" id="CPI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="CPI" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IR:</td>
-                                                <td><a href="#" id="IR" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="IR" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>LOI:</td>
-                                                <td><a href="#" id="LOI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="LOI" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sample Type:</td>
-                                                <td><a href="#" id="SampleType" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Sample Type" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Country Language:</td>
-                                                <td><a href="#" id="CountryLanguage" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Country Language" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>N Requested:</td>
-                                                <td><a href="#" id="NRequested" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="N Requested" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>N Feasible:</td>
-                                                <td><a href="#" id="NFeasible" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="N Feasible" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Target Age:</td>
-                                                <td><a href="#" id="TargetAge" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Age" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Target Gender:</td>
-                                                <td><a href="#" id="TargetGender" data-type="select" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Gender" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Target Notes:</td>
-                                                <td><a href="#" id="TargetNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Notes" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Quota Notes:</td>
-                                                <td><a href="#" id="QuotaNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Quota Notes" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tags:</td>
-                                                <td><a href="#" id="Tags" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Follow Up:</td>
-                                                <td><a href="#" id="FollowUp" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Category:</td>
-                                                <td><a href="#" id="Category" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
-                                            </tr>
+                                    <div class="col-lg-12">
+                                        <table id="editBidModal" class="table table-bordered table-striped" style="clear: both">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="35%">Status:</td>
+                                                    <td width="65%"><a href="#" id="Status" data-type="text" data-pk="1" data-placement="right" data-title="Status"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MCREF:</td>
+                                                    <td><a href="#" id="MCREF" data-type="text" data-pk="1" data-placement="right" data-title="MCREF"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Subject:</td>
+                                                    <td><a href="#" id="Subject" data-type="text" data-pk="1" data-placement="right" data-title="Subject"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Client:</td>
+                                                    <td><a href="#" id="Client" data-type="text" data-pk="1" data-placement="right" data-title="Client"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sales Rep:</td>
+                                                    <td><a href="#" id="SalesRep" data-type="text" data-pk="1" data-placement="right" data-title="Sales Rep"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bidding Manager:</td>
+                                                    <td><a href="#" id="BiddingManager" data-type="text" data-pk="1" data-placement="right" data-title="Bidding Manager"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Reply Count:</td>
+                                                    <td><a href="#" id="ReplyCount" data-type="text" data-pk="1" data-placement="right" data-title="Reply Count"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Revenue:</td>
+                                                    <td><a href="#" id="TotalRevenue" data-type="text" data-pk="1" data-placement="right" data-title="Total Revenue"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CPI:</td>
+                                                    <td>
+                                                        <!--<a href="#" id="CPI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="CPI" class="editable editable-click editable-empty"></a>-->
+                                                        <a href="#" editable-text="CPI.value"></a>
+                                                    </td>
+                                                    <td><a href="#" id="IR" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="IR" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>LOI:</td>
+                                                    <td><a href="#" id="LOI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="LOI" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sample Type:</td>
+                                                    <td><a href="#" id="SampleType" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Sample Type" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Country Language:</td>
+                                                    <td><a href="#" id="CountryLanguage" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Country Language" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>N Requested:</td>
+                                                    <td><a href="#" id="NRequested" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="N Requested" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>N Feasible:</td>
+                                                    <td><a href="#" id="NFeasible" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="N Feasible" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Target Age:</td>
+                                                    <td><a href="#" id="TargetAge" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Age" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Target Gender:</td>
+                                                    <td><a href="#" id="TargetGender" data-type="select" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Gender" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Target Notes:</td>
+                                                    <td><a href="#" id="TargetNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Notes" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Quota Notes:</td>
+                                                    <td><a href="#" id="QuotaNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Quota Notes" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tags:</td>
+                                                    <td><a href="#" id="Tags" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Follow Up:</td>
+                                                    <td><a href="#" id="FollowUp" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Category:</td>
+                                                    <td><a href="#" id="Category" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                                </tr>
 
-                                        </tbody>
-                                    </table> <!-- end editable fields -->
-                                </div>
+                                            </tbody>
+                                        </table> <!-- end editable fields -->
+                                    </div>
                             </div> <!--End Edit Tab Body-->
 
 

@@ -1,16 +1,19 @@
-﻿angular.module('myApp', ['smart-table'])
+﻿angular.module('myApp', ['smart-table', 'xeditable'])
+    .run(function (editableOptions) {
+        editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+    })
     .controller('mainCtrl', ['$scope', function ($scope) {
 
         var
-            nameList = ['Pierre', 'Pol', 'Jacques', 'Robert', 'Elisa'],
-            familyName = ['Dupont', 'Germain', 'Delcourt', 'bjip', 'Menez'];
+            nameList = ['Abrar', 'LeBrar', 'Arbrar', 'Abrir', 'Cobra'],
+            familyName = ['Basha', 'James', 'Badsha', 'Bashir', 'Bashuh'];
 
         function createRandomItem() {
             var
                 firstName = Math.floor(Math.random() * 4),
                 lastName = Math.floor(Math.random() * 4000),
                 age = 'email from ' + nameList[Math.floor(Math.random() * 4)] + ' ' + familyName[Math.floor(Math.random() * 4)],
-                email = nameList[Math.floor(Math.random() * 4)] + familyName[Math.floor(Math.random() * 4)] + '@whatever.com';
+                email = nameList[Math.floor(Math.random() * 4)] + familyName[Math.floor(Math.random() * 4)] + '@aol.com';
 
             return {
                 status: firstName,
@@ -24,18 +27,23 @@
         for (var j = 0; j < 50; j++) {
             $scope.displayed.push(createRandomItem());
         }
+
+        $scope.CPI = {
+            value: "test"
+        };
     }])
 
     .directive('stRatio', function () {
         return {
             link: function (scope, element, attr) {
-                var ratio = +(attr.stRatio);
+                var ratio = +attr.stRatio;
 
                 element.css('width', ratio + '%');
 
             }
         };
-    });
+ });
+
 
 $('#addEditModal').on('shown.bs.modal', function () {
     $(this).find('.modal-dialog').css({
