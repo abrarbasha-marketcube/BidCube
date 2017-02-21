@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-    <script src="~/Scripts/angular.js"></script>
+    <!----><script src="~/Scripts/angular.js"></script>
 
     <!-- x-editable -->
     <link href="~/Content/angular-xeditable-0.6.0/css/xeditable.css" rel="stylesheet">
@@ -132,59 +132,59 @@
                                                 </tr>
                                                 <tr>
                                                     <td>CPI:</td>
-                                                    <td>
-                                                        <!--<a href="#" id="CPI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="CPI" class="editable editable-click editable-empty"></a>-->
-                                                        <a href="#" editable-text="CPI.value"></a>
-                                                    </td>
-                                                    <td><a href="#" id="IR" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="IR" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" id= "CPI" editable-text="EditBid.CPI" onbeforesave="checkIfNumber($data)" onaftersave="saveNewBid()" e-required> {{EditBid.CPI || 'empty' }}</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IR:</td>
+                                                    <td><a href="#" editable-text="EditBid.IR" onbeforesave="checkIfNumber($data)" e-required> {{EditBid.IR || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>LOI:</td>
-                                                    <td><a href="#" id="LOI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="LOI" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.LOI" onbeforesave="checkIfNumber($data)" e-required> {{EditBid.LOI || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sample Type:</td>
-                                                    <td><a href="#" id="SampleType" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Sample Type" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.SampleType" e-required> {{EditBid.SampleType || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Country Language:</td>
-                                                    <td><a href="#" id="CountryLanguage" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Country Language" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.CountryLanguage" e-required> {{EditBid.CountryLanguage || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>N Requested:</td>
-                                                    <td><a href="#" id="NRequested" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="N Requested" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.NRequested" e-required> {{EditBid.NRequested || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>N Feasible:</td>
-                                                    <td><a href="#" id="NFeasible" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="N Feasible" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.NFeasible" e-required> {{EditBid.NFeasible || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Target Age:</td>
-                                                    <td><a href="#" id="TargetAge" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Age" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.TargetAge" onbeforesave="checkIfNumber($data)" e-required> {{EditBid.TargetAge || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Target Gender:</td>
-                                                    <td><a href="#" id="TargetGender" data-type="select" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Gender" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.TargetGender" e-required> {{EditBid.TargetGender || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Target Notes:</td>
-                                                    <td><a href="#" id="TargetNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Target Notes" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.TargetNotes" e-required> {{EditBid.TargetNotes || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Quota Notes:</td>
-                                                    <td><a href="#" id="QuotaNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Quota Notes" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.QuotaNotes" e-required> {{EditBid.QuotaNotes || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Tags:</td>
-                                                    <td><a href="#" id="Tags" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.Tags" e-required> {{EditBid.Tags || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Follow Up:</td>
-                                                    <td><a href="#" id="FollowUp" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.FollowUp" e-required> {{EditBid.FollowUp || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Category:</td>
-                                                    <td><a href="#" id="Category" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                                    <td><a href="#" editable-text="EditBid.Category" e-required> {{EditBid.Category || 'empty' }}</a></td>
                                                 </tr>
 
                                             </tbody>
@@ -285,59 +285,59 @@
                                 <tbody>
                                     <tr>
                                         <td width="35%">CPI:</td>
-                                        <td width="65%"><a href="#" id="newCPI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New CPI" class="editable editable-click editable-empty"></a></td>
+                                        <td width="65%"><a href="#" editable-text="NewBid.CPI" onbeforesave="checkIfNumber($data)" e-required> {{NewBid.CPI || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>IR:</td>
-                                        <td><a href="#" id="newIR" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New IR" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.IR" onbeforesave="checkIfNumber($data)" e-required> {{NewBid.IR || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>LOI:</td>
-                                        <td><a href="#" id="newLOI" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New LOI" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.LOI" onbeforesave="checkIfNumber($data)" e-required> {{NewBid.LOI || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Sample Type:</td>
-                                        <td><a href="#" id="newSampleType" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New Sample Type" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.SampleType"> {{NewBid.SampleType || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Country Language:</td>
-                                        <td><a href="#" id="newCountryLanguage" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New Country Language" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-checklist="NewBid.CountryLanguage" e-ng-options="l.value as l.text for l in languages"> {{ showLanguages() }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>N Requested:</td>
-                                        <td><a href="#" id="newNRequested" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New N Requested" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.NRequested" onbeforesave="checkIfNumber($data)"> {{NewBid.NRequested || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>N Feasible:</td>
-                                        <td><a href="#" id="newNFeasible" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New N Feasible" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.NFeasible" onbeforesave="checkIfNumber($data)"> {{NewBid.NFeasible || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Target Age:</td>
-                                        <td><a href="#" id="newTargetAge" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New Target Age" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.TargetAge" onbeforesave="checkIfNumber($data)"> {{NewBid.TargetAge || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Target Gender:</td>
-                                        <td><a href="#" id="newTargetGender" data-type="select" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New Target Gender" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-select="NewBid.TargetGender" e-name="gender" e-ng-options="g.value as g.text for g in genders"> {{ NewBid.TargetGender || 'Select One' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Target Notes:</td>
-                                        <td><a href="#" id="newTargetNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New Target Notes" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-textarea="NewBid.TargetNotes"> {{NewBid.TargetNotes || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Quota Notes:</td>
-                                        <td><a href="#" id="newQuotaNotes" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New Quota Notes" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-textarea="NewBid.QuotaNotes"> {{NewBid.QuotaNotes || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Tags:</td>
-                                        <td><a href="#" id="newTags" data-type="textarea" data-pk="1" data-placement="right" data-placeholder="Required" data-title="New Tags" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-textarea="NewBid.Tags"> {{NewBid.Tags || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Follow Up:</td>
-                                        <td><a href="#" id="newFollowUp" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.FollowUp" e-required> {{NewBid.FollowUp || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Category:</td>
-                                        <td><a href="#" id="newCategory" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Tags" class="editable editable-click editable-empty"></a></td>
+                                        <td><a href="#" editable-text="NewBid.Category"> {{NewBid.Category || 'empty' }}</a></td>
                                     </tr>
                                 </tbody>
                             </table>

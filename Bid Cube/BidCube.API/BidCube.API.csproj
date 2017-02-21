@@ -225,6 +225,10 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-xeditable-0.6.0\css\xeditable.css" />
+    <Content Include="Scripts\angular-xeditable-0.6.0\css\xeditable.min.css" />
+    <Content Include="Scripts\angular-xeditable-0.6.0\js\xeditable.js" />
+    <Content Include="Scripts\angular-xeditable-0.6.0\js\xeditable.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />

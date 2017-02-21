@@ -56,7 +56,7 @@ namespace BidCube.DataService
 
                 throw ex;
             }
-            return false;
+            //return false;
         }
 
         List<Status_History> IBidDataService.GetBidStatusHistory(int bidId)
