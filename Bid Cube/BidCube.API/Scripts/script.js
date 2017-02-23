@@ -39,6 +39,24 @@
             }
         };
 
+        $scope.checkInAgeRange = function (data) {
+            if (!isNaN(data) === false) {
+                return "Input must be a number";
+            }
+            else if (data < 0 || data > 99) {
+                return "Input must be a within range 0-99";
+            }
+        };
+
+        $scope.checkInLOIRange = function (data) {
+            if (!isNaN(data) === false) {
+                return "Input must be a number";
+            }
+            else if (data < 0 || data > 100) {
+                return "Input must be within range 0-100";
+            }
+        };
+
         //todo: this isn't working
         $scope.checkIfString = function (data) {
             if (typeof data !== string || !(data instanceof String)) {
@@ -54,7 +72,8 @@
             CountryLanguage: undefined,
             NRequested: undefined,
             NFeasible: undefined,
-            TargetAge: undefined,
+            TargetAgeMin: undefined,
+            TargetAgeMax: undefined,
             TargetGender: undefined,
             TargetNotes: undefined,
             QuotaNotes: undefined,
@@ -70,7 +89,8 @@
             CountryLanguage: undefined,
             NRequested: undefined,
             NFeasible: undefined,
-            TargetAge: undefined,
+            TargetAgeMin: undefined,
+            TargetAgeMax: undefined,
             TargetGender: undefined,
             TargetNotes: undefined,
             QuotaNotes: undefined,
@@ -110,7 +130,7 @@
         };
 
         $scope.saveNewBid = function () {
-            return $http.post('/saveNewBid', $scope.NewBid);
+            return $http.post('/api/BidStatus/Post', $scope.NewBid);
         };
     }])
 

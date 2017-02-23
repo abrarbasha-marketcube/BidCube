@@ -140,7 +140,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>LOI:</td>
-                                                    <td><a href="#" editable-text="EditBid.LOI" onbeforesave="checkIfNumber($data)" e-required> {{EditBid.LOI || 'empty' }}</a></td>
+                                                    <td><a href="#" editable-text="EditBid.LOI" onbeforesave="checkInLOIRange($data)" e-required> {{EditBid.LOI || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sample Type:</td>
@@ -160,7 +160,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Target Age:</td>
-                                                    <td><a href="#" editable-text="EditBid.TargetAge" onbeforesave="checkIfNumber($data)" e-required> {{EditBid.TargetAge || 'empty' }}</a></td>
+                                                    <td><a href="#" editable-text="EditBid.TargetAgeMin" onbeforesave="checkInAgeRange($data)" e-required> {{EditBid.TargetAgeMin || 'empty' }}</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="#" editable-text="EditBid.TargetAgeMax" onbeforesave="checkInAgeRange($data)"> {{EditBid.TargetAgeMax || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Target Gender:</td>
@@ -168,19 +172,19 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Target Notes:</td>
-                                                    <td><a href="#" editable-text="EditBid.TargetNotes" e-required> {{EditBid.TargetNotes || 'empty' }}</a></td>
+                                                    <td><a href="#" editable-textarea="EditBid.TargetNotes" e-required> {{EditBid.TargetNotes || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Quota Notes:</td>
-                                                    <td><a href="#" editable-text="EditBid.QuotaNotes" e-required> {{EditBid.QuotaNotes || 'empty' }}</a></td>
+                                                    <td><a href="#" editable-textarea="EditBid.QuotaNotes" e-required> {{EditBid.QuotaNotes || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Tags:</td>
-                                                    <td><a href="#" editable-text="EditBid.Tags" e-required> {{EditBid.Tags || 'empty' }}</a></td>
+                                                    <td><a href="#" editable-textarea="EditBid.Tags" e-required> {{EditBid.Tags || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Follow Up:</td>
-                                                    <td><a href="#" editable-text="EditBid.FollowUp" e-required> {{EditBid.FollowUp || 'empty' }}</a></td>
+                                                    <td><a href="#" editable-datetime-local="EditBid.FollowUp" e-required> {{ (EditBid.FollowUp |  date: "yyyy-MM-ddTHH:mm:ss") || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Category:</td>
@@ -221,7 +225,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary save">Save changes</button>
+                    <button type="button" id="SaveButton" onclick="saveNewBid()" class="btn btn-primary save">Save changes</button>
                 </div>
 
             </div>
@@ -293,7 +297,7 @@
                                     </tr>
                                     <tr>
                                         <td>LOI:</td>
-                                        <td><a href="#" editable-text="NewBid.LOI" onbeforesave="checkIfNumber($data)" e-required> {{NewBid.LOI || 'empty' }}</a></td>
+                                        <td><a href="#" editable-text="NewBid.LOI" onbeforesave="checkInLOIRange($data)" e-required> {{NewBid.LOI || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Sample Type:</td>
@@ -313,7 +317,11 @@
                                     </tr>
                                     <tr>
                                         <td>Target Age:</td>
-                                        <td><a href="#" editable-text="NewBid.TargetAge" onbeforesave="checkIfNumber($data)"> {{NewBid.TargetAge || 'empty' }}</a></td>
+                                        <td><a href="#" editable-text="NewBid.TargetAgeMin" onbeforesave="checkInAgeRange($data)"> {{NewBid.TargetAgeMin || 'empty' }}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><a href="#" editable-text="NewBid.TargetAgeMax" onbeforesave="checkInAgeRange($data)"> {{NewBid.TargetAgeMax || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Target Gender:</td>
@@ -333,7 +341,7 @@
                                     </tr>
                                     <tr>
                                         <td>Follow Up:</td>
-                                        <td><a href="#" editable-text="NewBid.FollowUp" e-required> {{NewBid.FollowUp || 'empty' }}</a></td>
+                                        <td><a href="#" editable--datetime-local="NewBid.FollowUp"> {{ (NewBid.FollowUp |  date: "yyyy-MM-ddTHH:mm:ss") || 'empty' }}</a></td>
                                     </tr>
                                     <tr>
                                         <td>Category:</td>

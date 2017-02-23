@@ -17,10 +17,10 @@ ng.module('smart-table')
         scope.$watch('row.isSelected', function (newValue) {
           if (newValue === true) {
               element.addClass(stConfig.select.selectedClass);
-              document.getElementById("addEditModalButton").innerHTML = "Edit"
+              document.getElementById("addEditModalButton").innerHTML = "Edit";
           } else {
               element.removeClass(stConfig.select.selectedClass);
-              document.getElementById("addEditModalButton").innerHTML = "Add"
+              document.getElementById("addEditModalButton").innerHTML = "Add";
           }
         });
       }
