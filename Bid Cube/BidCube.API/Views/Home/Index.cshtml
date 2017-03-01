@@ -132,7 +132,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>CPI:</td>
-                                                    <td><a href="#" id= "CPI" editable-text="EditBid.CPI" onbeforesave="checkIfNumber($data)" onaftersave="saveNewBid()" e-required> {{EditBid.CPI || 'empty' }}</a></td>
+                                                    <td><a href="#" id= "CPI" editable-text="EditBid.CPI" onbeforesave="checkIfNumber($data)" e-required> {{EditBid.CPI || 'empty' }}</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>IR:</td>
@@ -198,34 +198,18 @@
 
 
                             <div role="tabpanel" class="tab-pane" id="emailTab">
-                                Please wait while redirecting to OWA...
-                                <!-- Email Tab Body -->
-                                <!--<div class="row">
-                                    <div class="col-md-6">
-                                        Left
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h2>Send e-mail to someone@example.com:</h2>
-                                        <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                                            Name:<br>
-                                            <input type="text" name="name"><br>
-                                            E-mail:<br>
-                                            <input type="text" name="mail"><br>
-                                            Comment:<br>
-                                            <input type="text" name="comment" size="50"><br><br>
-                                            <input type="submit" value="Send">
-                                            <input type="reset" value="Reset">
-                                        </form>
-                                    </div>
-                                    -->
+                              Stubbed
+
                             </div> <!--End Email Tab Body-->
 
                         </div>
                     </div>
                 </div>
+                <!-- Edit Bid Footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" id="SaveButton" onclick="saveNewBid()" class="btn btn-primary save">Save changes</button>
+                    <!-- TODO: figure out why this is not moving forward when this button is clicked -->
+                    <button type="button" id="SaveButtonForEdit" class="btn btn-primary save">Save changes</button>
                 </div>
 
             </div>
@@ -355,9 +339,10 @@
                         </div>
                     </div>
                 </div> <!-- end modal body-->
+                <!-- New Bid modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary save">Save changes</button>
+                    <button type="button" id="SaveButtonForNew" class="btn btn-primary save" ng-submit="saveNewBid()" >Save changes</button>
                 </div>
             </div>
         </div>

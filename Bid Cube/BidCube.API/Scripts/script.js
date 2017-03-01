@@ -7,7 +7,7 @@
         });*/
     })
 
-    .controller('mainCtrl', ['$scope', function ($scope) {
+    .controller('mainCtrl',  function ($scope, $http)  {
 
         var
             nameList = ['Abrar', 'LeBrar', 'Arbrar', 'Abrir', 'Cobra'],
@@ -122,17 +122,18 @@
         $scope.showLanguages = function () {
             var selected = [];
             angular.forEach($scope.languages, function () {
-                if ($scope.user.languages.indexOf(l.value) >= 0) {
+                if ($scope.languages.indexOf(l.value) >= 0) {
                     selected.push(l.text);
                 }
             });
             return selected.length ? selected.join(', ') : 'Not set';
         };
 
-        $scope.saveNewBid = function () {
+        $scope.saveNewBid = function() {
             return $http.post('/api/BidStatus/Post', $scope.NewBid);
         };
-    }])
+
+    })
 
     .directive('stRatio', function () {
         return {
@@ -210,4 +211,8 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
         $modalInstance.dismiss('cancel');
     };
 };
+
+/*function saveNewBid($scope, $http) {
+    return $http.post('/api/BidStatus/Post', $scope.NewBid);
+};*/
 
